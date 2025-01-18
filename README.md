@@ -2,12 +2,12 @@
 
 A tool for red teams to use the CLR feature in MSSQL to execute commands and load shellcode.
 
-[![](assets/img/ShellCode.png)](assets/Cobalt.mp4)
+[![](assets/img/ShellCode.png)](https://github.com/user-attachments/assets/608e2aa5-bada-453c-a21c-5b5222810612)
 
 > To use this tool, you must have access to a user with the sysadmin or serveradmin role.
 
 * [Build](#build)
-* [Usage](#Usage)
+* [Usage](#usage)
     * [LoadAssembly](#loadassembly)
     * [AutoRemove](#autoremove)
     * [Example](#example)
